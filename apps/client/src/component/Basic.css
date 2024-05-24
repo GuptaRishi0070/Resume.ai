@@ -1,0 +1,157 @@
+/* ImageHoverStyles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#09090B;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.image-container {
+    perspective: 1000px; /* For tilt effect */
+    width: 60vw; /* Increased width */
+    max-width: 1000px; /* Increased max-width */
+    aspect-ratio: 16 / 10; /* Maintain landscape aspect ratio */
+    overflow: hidden; /* Clip the overflow content */
+    position: absolute; /* Position absolutely within the body */
+    top: 5%; /* Adjust this value to position the container slightly down */
+    left: 52%; /* Adjust this value to position the container from the right */
+    max-height: 1900px !important;
+}
+
+
+.hover-effect {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without being distorted */
+    transition: transform 0.1s ease; /* Ensure smooth transition on hover */
+    transform: scale(2); /* Initial scale */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container {
+    margin-top: 32px;
+    max-width: 3xl;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+    margin-bottom: 8px;
+  }
+  
+  .version-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .version-tag {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #3182ce;
+    color: #fff;
+    border-radius: 9999px;
+  }
+  
+  .new-features-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #3182ce;
+    text-decoration: underline;
+  }
+  
+  .intro-text {
+    margin-top: 24px;
+  }
+  
+  .intro-text h6 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .intro-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .description {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #4a5568;
+  }
+  
+  .action-buttons {
+    margin-top: 24px;
+  }
+  
+  .get-started-btn,
+  .learn-more-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .get-started-btn {
+    background-color: #3182ce;
+    color: #fff;
+  }
+  
+  .get-started-btn:hover,
+  .learn-more-link:hover {
+    background-color: #2c5282;
+  }
+  
+  .image-container {
+    margin-top: 4px;
+  }
+  .space-y-2>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(.5rem * var(--tw-space-y-reverse));
+}
+
+@media (min-width: 640px) {
+    .sm\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+}
+
+.tracking-tight {
+    letter-spacing: -.025em;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: white; /* Set text color to white */
+}
+
+h1 {
+    outline: 1px solid #162544 !important;
+    color: white; /* Set text color to white */
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+    color: white; /* Set text color to white */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
