@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-US" translate="no">
+  <head>
+    <base href="/" />
+
+    <!-- Essential Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="googlebot" content="notranslate" />
+    <meta name="description" content="A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume." />
+
+    <!-- SEO Meta Tags -->
+    <title>Reactive Resume - A Free and Open-Source Resume Builder</title>
+    <meta name="keywords" content="resume builder, free resume builder, open-source resume builder, resume template, CV builder, online resume" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reactive Resume - A Free and Open-Source Resume Builder" />
+    <meta property="og:description" content="A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume." />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://yourwebsite.com/path/to/image.jpg" />
+    <meta property="og:site_name" content="Reactive Resume" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Reactive Resume - A Free and Open-Source Resume Builder" />
+    <meta name="twitter:description" content="A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume." />
+    <meta name="twitter:image" content="https://yourwebsite.com/path/to/image.jpg" />
+    <meta name="twitter:site" content="@yourtwitterhandle" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Reactive Resume",
+        "url": "https://yourwebsite.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://yourwebsite.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "image": "https://yourwebsite.com/path/to/image.jpg",
+        "description": "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+      }
+    </script>
+
+    <!-- White Flash Prevention Script -->
+    <script type="text/javascript" src="/scripts/initialize-theme.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icon/dark.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/icon/light.svg" media="(prefers-color-scheme: dark)" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="text-sm antialiased bg-background text-foreground print:bg-white print:m-0">
+    <div id="root"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </body>
+</html>
