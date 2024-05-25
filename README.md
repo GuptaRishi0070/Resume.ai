@@ -1,6 +1,9 @@
 ![image](https://github.com/GuptaRishi0070/Resume_AI/assets/108511606/88fa5e8c-d489-4d46-b0cf-8d6b47f79ac6)
 
-![Reactive Resume Demo](https://raw.githubusercontent.com/GuptaRishi0070/Resume.ai/main/assets/108511606/b84dff9e-26d2-4bef-8896-2c47d111ac12)
+
+https://github.com/GuptaRishi0070/Resume.ai/assets/108511606/8a56d626-eb9f-4a26-ba93-0e1e43bb84aa
+
+
 
 
 # Reactive Resume
