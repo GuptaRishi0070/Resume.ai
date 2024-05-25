@@ -23,16 +23,17 @@ export const Footer: FC<FooterProps> = () => (
 
         <h2 className="text-xl font-medium">{t`Reactive Resume`}</h2>
 
-        <p className="prose prose-sm prose-zinc leading-relaxed opacity-60 dark:prose-invert">
-          {t`A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.`}
-        </p>
+        <p className="prose prose-sm prose-zinc leading-relaxed opacity-90 dark:prose-invert hover:scale-105 hover:text-white transition-transform">
+  {t`A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.`}
+</p>
+
 
         <Copyright className="mt-6" />
       </div>
 
       {/* DigitalOcean Sponsorship and Links */}
       <div className="relative col-start-4 flex flex-col items-end justify-end">
-        <div className="mb-14 space-y-6 text-right">
+        <div className="mb-14 space-y-6 text-right opacity-90 dark:prose-invert hover:scale-105 hover:text-white transition-transform">
           <a
             className="block"
             href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=Reactive-Resume"

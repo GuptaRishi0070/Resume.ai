@@ -6,7 +6,7 @@ export const SupportSection = () => (
     className="relative space-y-12 bg-secondary-accent py-24 text-primary sm:py-32"
   >
     <div className="container space-y-6">
-      <h1 className="text-4xl font-bold">{t`Supporting Reactive Resume`}</h1>
+      <h1 className="text-4xl font-bold hover:scale-110 transition-transform">{t`Supporting Reactive Resume`}</h1>
 
       <p className="max-w-4xl leading-loose">
         {t`Reactive Resume is a free and open-source project crafted mostly by me, and your support would be greatly appreciated. If you're inclined to contribute, and only if you can afford to, consider making a donation through any of the listed platforms. Additionally, donations to Reactive Resume through Open Collective are tax-exempt, as the project is fiscally hosted by Open Collective Europe.`}
@@ -20,14 +20,7 @@ export const SupportSection = () => (
         >
           <img
             src="/support-logos/github-sponsors-light.svg"
-            className="hidden max-h-[42px] dark:block"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="GitHub Sponsors"
-          />
-          <img
-            src="/support-logos/github-sponsors-dark.svg"
-            className="block max-h-[42px] dark:hidden"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
+            className="max-h-[42px] dark:max-h-[42px] hover:scale-110 transition-transform"
             alt="GitHub Sponsors"
           />
         </a>
@@ -35,23 +28,25 @@ export const SupportSection = () => (
           href="https://opencollective.com/Reactive-Resume"
           rel="noreferrer noopener nofollow"
           target="_blank"
+          className="hover:scale-110 transition-transform"
         >
           <img
             src="/support-logos/open-collective-light.svg"
-            className="hidden max-h-[38px] dark:block"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
-            alt="Open Collective"
-          />
-          <img
-            src="/support-logos/open-collective-dark.svg"
-            className="block max-h-[38px] dark:hidden"
-            // eslint-disable-next-line lingui/no-unlocalized-strings
+            className="max-h-[38px] dark:max-h-[38px] hover:scale-110 transition-transform"
             alt="Open Collective"
           />
         </a>
-        <a href="https://paypal.me/amruthde" rel="noreferrer noopener nofollow" target="_blank">
-          {/* eslint-disable-next-line lingui/no-unlocalized-strings */}
-          <img src="/support-logos/paypal.svg" className=" max-h-[28px]" alt="PayPal" />
+        <a
+          href="https://paypal.me/amruthde"
+          rel="noreferrer noopener nofollow"
+          target="_blank"
+          className="hover:scale-110 transition-transform"
+        >
+          <img
+            src="/support-logos/paypal.svg"
+            className="max-h-[28px] dark:max-h-[28px] hover:scale-110 transition-transform"
+            alt="PayPal"
+          />
         </a>
       </div>
 
@@ -62,7 +57,7 @@ export const SupportSection = () => (
       <div className="flex items-center gap-x-10">
         <img
           src="/support-logos/crowdin-light.svg"
-          className="hidden max-h-[32px] dark:block"
+          className="hidden max-h-[32px] dark:block hover:scale-110 transition-transform"
           // eslint-disable-next-line lingui/no-unlocalized-strings
           alt="Crowdin"
         />

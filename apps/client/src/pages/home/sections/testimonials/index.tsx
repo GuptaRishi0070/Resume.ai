@@ -87,6 +87,7 @@ export const TestimonialsSection = () => (
               key={index}
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0, transition: { delay: index * 0.25 } }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} // Tilt effect on hover
               className={cn(
                 "relative overflow-hidden rounded-lg bg-secondary-accent p-5 text-primary shadow-lg",
                 index > 0 && "hidden lg:block",
