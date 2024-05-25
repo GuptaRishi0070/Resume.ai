@@ -1,10 +1,5 @@
 ![image](https://github.com/GuptaRishi0070/Resume_AI/assets/108511606/88fa5e8c-d489-4d46-b0cf-8d6b47f79ac6)
 
-![App Version](https://img.shields.io/github/package-json/version/AmruthPillai/Reactive-Resume?label=version)
-[![Docker Pulls](https://img.shields.io/docker/pulls/amruthpillai/reactive-resume)](https://hub.docker.com/repository/docker/amruthpillai/reactive-resume)
-[![Crowdin](https://badges.crowdin.net/reactive-resume/localized.svg)](https://crowdin.com/project/reactive-resume)
-[![Discord](https://img.shields.io/discord/1173518977851473940?label=discord&link=https%3A%2F%2Fdiscord.gg%2FhzwkZbyvUW)](https://discord.gg/hzwkZbyvUW)
-
 # Reactive Resume
 
 A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.
