@@ -8,15 +8,8 @@ type Props = {
 
 export const Icon = ({ size = 32, className }: Props) => {
   const { isDarkMode } = useTheme();
-
-  // Set the base path for the icon images
-  const basePath = "/icon/";
-
-  // Determine the filename based on dark mode status
   const filename = isDarkMode ? "light.svg" : "dark.svg";
-
-  // Construct the complete image source URL
-  const src = `${basePath}${filename}`;
+  const src = `/icon/${filename}`;
 
   return (
     <img

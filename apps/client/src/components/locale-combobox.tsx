@@ -1,9 +1,9 @@
 import { t } from "@lingui/macro";
 import { Check } from "@phosphor-icons/react";
-import { Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, Popover, PopoverContent, PopoverTrigger, ScrollArea } from "@reactive-resume/ui";
+import { Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Popover, PopoverContent, PopoverTrigger, ScrollArea } from "@reactive-resume/ui";
 import { cn } from "@reactive-resume/utils";
 import fuzzy from "fuzzy";
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 type Language = {
   name: string;
@@ -19,7 +19,7 @@ type Props = {
 export const LocaleCombobox: React.FC<Props> = ({ value, languages, onChange }) => {
   const [search, setSearch] = useState("");
 
-  const options = useMemo(() => {
+  const filteredLanguages = useMemo(() => {
     return fuzzy.filter(search, languages, {
       extract: (lang) => `${lang.name} ${lang.locale}`,
     });
@@ -32,40 +32,29 @@ export const LocaleCombobox: React.FC<Props> = ({ value, languages, onChange }) 
         placeholder={t`Search for a language`}
         onValueChange={setSearch}
       />
-      <CommandList>
-        <CommandEmpty>{t`No results found`}</CommandEmpty>
-        <CommandGroup>
-          <ScrollArea orientation="vertical">
-            <div className="max-h-60">
-              {options.map(({ original }) => (
-                <CommandItem
-                  key={original.locale}
-                  disabled={false}
-                  value={original.locale.trim()}
-                  onSelect={(selectedValue) => {
-                    const result = options.find(
-                      ({ original }) => original.locale.trim() === selectedValue,
-                    );
-
-                    if (!result) return null;
-
-                    onChange(result.original.locale); // Update the selected language
-                  }}
-                >
-                  <Check
-                    className={cn(
-                      "mr-2 size-4 opacity-0",
-                      value === original.locale && "opacity-100",
-                    )}
-                  />
-                  {original.name}{" "}
-                  <span className="ml-1 text-xs opacity-50">({original.locale})</span>
-                </CommandItem>
-              ))}
-            </div>
-          </ScrollArea>
-        </CommandGroup>
-      </CommandList>
+      <CommandEmpty>{t`No results found`}</CommandEmpty>
+      <CommandGroup>
+        <ScrollArea orientation="vertical">
+          <div className="max-h-60">
+            {filteredLanguages.map(({ original }) => (
+              <CommandItem
+                key={original.locale}
+                value={original.locale.trim()}
+                onSelect={() => onChange(original.locale)}
+              >
+                <Check
+                  className={cn(
+                    "mr-2 size-4 opacity-0",
+                    value === original.locale && "opacity-100",
+                  )}
+                />
+                {original.name}{" "}
+                <span className="ml-1 text-xs opacity-50">({original.locale})</span>
+              </CommandItem>
+            ))}
+          </div>
+        </ScrollArea>
+      </CommandGroup>
     </Command>
   );
 };

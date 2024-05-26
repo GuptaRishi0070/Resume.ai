@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "@reactive-resume/hooks";
 import { cn } from "@reactive-resume/utils";
 
@@ -8,15 +8,20 @@ type Props = {
 };
 
 export const Logo: React.FC<Props> = ({ size = 32, className }) => {
-  // Destructure the isDarkMode property directly from the useTheme() hook
   const { isDarkMode } = useTheme();
 
-  // Define the source of the image based on the isDarkMode value
-  const src = isDarkMode ? "/logo/dark.svg" : "/logo/light.svg";
+  // Update the body's class based on the dark mode status
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   return (
     <img
-      src={src}
+      src={isDarkMode ? "/logo/dark.svg" : "/logo/light.svg"}
       width={size}
       height={size}
       alt="Reactive Resume"

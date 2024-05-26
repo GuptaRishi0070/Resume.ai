@@ -17,7 +17,6 @@ import {
 } from "@reactive-resume/ui";
 import { cn } from "@reactive-resume/utils";
 import { useState } from "react";
-
 import { toast } from "../hooks/use-toast";
 import { changeTone } from "../services/openai/change-tone";
 import { fixGrammar } from "../services/openai/fix-grammar";
